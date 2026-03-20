@@ -3,8 +3,8 @@
 :root {
   --bg: #080808;
   --text: #ede8e0;
-  --text-dim: #ded9d1;
-  --text-dimmer: #ded9d1;
+  --text-dim: #a8a29b;
+  --text-dimmer: #6b6560;
   --accent: #b8c4c2;
   --crack: #c8d4d2;
   --serif: 'Cormorant Garamond', Georgia, serif;
@@ -52,19 +52,21 @@ a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    transparent 20%,
-    var(--crack) 45%,
-    var(--crack) 55%,
-    transparent 80%,
+    transparent 15%,
+    var(--crack) 35%,
+    #e8f0ee 50%,
+    var(--crack) 65%,
+    transparent 85%,
     transparent 100%
   );
+  box-shadow: 0 0 10px 2px rgba(200, 212, 210, 0.5);
   opacity: 0;
   animation: crackReveal 3s ease forwards;
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
   z-index: 100;
 }
 
