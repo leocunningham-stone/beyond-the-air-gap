@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Leo Cunningham</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="crack"></div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="selected-works.html">Works</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="bridge-intro">
+      <p>These are not screening questions.</p>
+      <p>There are no right answers. There is only what is true for you at this moment.</p>
+      <p>Answer as plainly as you can.</p>
+    </div>
+
+    <div class="questions-wrap">
+
+      <form id="bridge-form">
+
+        <div class="question-block">
+          <span class="question-number">Question one</span>
+          <p class="question-text">When your organisation produces its best work — what condition makes that possible?</p>
+          <textarea class="question-input" name="q1" rows="3" placeholder="Answer plainly."></textarea>
+        </div>
+
+        <div class="question-block">
+          <span class="question-number">Question two</span>
+          <p class="question-text">What is the cost of the last significant decision you didn't make?</p>
+          <textarea class="question-input" name="q2" rows="3" placeholder="Answer plainly."></textarea>
+        </div>
+
+        <div class="question-block">
+          <span class="question-number">Question three</span>
+          <p class="question-text">What would it mean to be right about something that nobody around you can currently see?</p>
+          <textarea class="question-input" name="q3" rows="3" placeholder="Answer plainly."></textarea>
+        </div>
+
+        <div class="bridge-submit">
+          <div style="flex: 1;">
+            <input
+              class="contact-field"
+              type="email"
+              name="email"
+              placeholder="Your email address."
+              required
+            >
+            <button class="continue-btn" type="submit">Continue →</button>
+          </div>
+        </div>
+
+      </form>
+
+      <div class="confirm-message" id="confirm">
+        <p>Received.</p>
+        <br>
+        <p>If what you wrote is true — and only you know whether it is — you will hear from me directly.</p>
+        <br>
+        <p style="font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--text-dimmer);">Written beyond the air-gap.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById('bridge-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const form = this;
+      const confirm = document.getElementById('confirm');
+
+      const data = {
+        q1: form.q1.value,
+        q2: form.q2.value,
+        q3: form.q3.value,
+        email: form.email.value,
+        timestamp: new Date().toISOString()
+      };
+
+      // For now — log to console and show confirmation
+      // Replace with your preferred endpoint (Formspree, Netlify Forms, etc.)
+      console.log('Bridge submission:', data);
+
+      form.style.opacity = '0';
+      form.style.transition = 'opacity 0.6s ease';
+
+      setTimeout(() => {
+        form.style.display = 'none';
+        confirm.style.display = 'block';
+        confirm.style.opacity = '0';
+        confirm.style.transition = 'opacity 1s ease';
+        setTimeout(() => { confirm.style.opacity = '1'; }, 50);
+      }, 600);
+    });
+  </script>
+
+</body>
+</html>
