@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Fidelity Cell — Leo Cunningham</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Courier+Prime&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080808;
+      --text: #ede8e0;
+      --text-dim: #a8a29b;
+      --text-dimmer: #6b6560;
+      --crack: #c8d4d2;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    nav {
+      padding: 2rem 2.5rem 1rem;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: var(--text-dimmer);
+      text-decoration: none;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--text-dim);
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 3rem 2.5rem 6rem;
+    }
+
+    .opening {
+      margin-bottom: 3.5rem;
+    }
+
+    .opening p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--text);
+      margin-bottom: 1.4rem;
+    }
+
+    .opening p.dim {
+      color: var(--text-dim);
+      font-style: italic;
+    }
+
+    .section-label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dimmer);
+      margin-bottom: 1.4rem;
+      margin-top: 3rem;
+    }
+
+    .divider {
+      width: 40%;
+      height: 1px;
+      background: var(--text-dimmer);
+      margin: 3rem 0 2.5rem;
+      opacity: 0.4;
+    }
+
+    .essay-list {
+      list-style: none;
+      margin-bottom: 0;
+    }
+
+    .essay-list li {
+      margin-bottom: 1.8rem;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid #141414;
+    }
+
+    .essay-list li:last-child {
+      border-bottom: none;
+    }
+
+    .essay-number {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--text-dimmer);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .essay-list a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-weight: 400;
+      display: block;
+      margin-bottom: 0.3rem;
+      transition: color 0.2s ease;
+    }
+
+    .essay-list a:hover {
+      color: var(--crack);
+    }
+
+    .essay-desc {
+      font-size: 0.85rem;
+      color: var(--text-dimmer);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .doc-list {
+      list-style: none;
+      margin-bottom: 0;
+    }
+
+    .doc-list li {
+      margin-bottom: 1.4rem;
+      padding-bottom: 1.4rem;
+      border-bottom: 1px solid #141414;
+    }
+
+    .doc-list li:last-child {
+      border-bottom: none;
+    }
+
+    .doc-list a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .doc-list a:hover {
+      color: var(--text);
+    }
+
+    .doc-desc {
+      font-size: 0.85rem;
+      color: var(--text-dimmer);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .close-note {
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid #141414;
+    }
+
+    .close-note p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-dim);
+      margin-bottom: 1.2rem;
+    }
+
+    .close-note .address {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--text-dimmer);
+      line-height: 1.9;
+      margin-top: 1.5rem;
+    }
+
+    .copyright {
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      color: var(--text-dimmer);
+      font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 2rem 1.5rem 4rem;
+      }
+
+      nav {
+        padding: 1.5rem 1.5rem 0.5rem;
+      }
+
+      .divider {
+        width: 60%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://leocunningham.com/index.html">Home</a>
+  </nav>
+
+  <div class="container">
+
+    <div class="opening">
+      <p>You have read the doctrine. You are in the right place.</p>
+      <p>What follows is the field work that preceded it. Three essays, in the order they should be read. Then the documents.</p>
+      <p class="dim">If something described in the booklet is real in your organisation, the instruction at the foot of this page is the next move.</p>
+    </div>
+
+    <div class="section-label">The Field Reports — Read in this order</div>
+
+    <ul class="essay-list">
+      <li>
+        <span class="essay-number">I</span>
+        <a href="https://leocunningham.com/essays/something-is-wrong-in-this-room.html">Something Is Wrong In This Room</a>
+        <span class="essay-desc">The pre-cognitive signal. What the body reads before the mind has language for it. And what it costs when the room overrides it.</span>
+      </li>
+      <li>
+        <span class="essay-number">II</span>
+        <a href="https://leocunningham.com/essays/the-white-hat.html">The White Hat</a>
+        <span class="essay-desc">You already pay people to break your systems. The same logic applies to your judgment. The Fidelity Cell is that function.</span>
+      </li>
+      <li>
+        <span class="essay-number">III</span>
+        <a href="https://leocunningham.com/essays/the-fatality-of-fluency.html">The Fatality of Fluency</a>
+        <span class="essay-desc">Three rooms. Three outliers. Three correct signals. Three systems that functioned exactly as designed. The consequences arrived anyway.</span>
+      </li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <div class="section-label">The Documents</div>
+
+    <ul class="doc-list">
+      <li>
+        <a href="https://leocunningham.com/the-advisor.html">The Advisor ↗</a>
+        <span class="doc-desc">A specification, not a biography. Who does this work and why that description is not hypothetical.</span>
+      </li>
+      <li>
+        <a href="https://leocunningham.com/assets/docs/the-fidelity-cell.pdf">The Fidelity Cell ↓</a>
+        <span class="doc-desc">The doctrine. The complete argument from problem to intervention.</span>
+      </li>
+      <li>
+        <a href="https://leocunningham.com/assets/docs/fidelity-cell-discovery.pdf">Discovery ↓</a>
+        <span class="doc-desc">The first formal engagement. What it is, how it works, what it produces.</span>
+      </li>
+    </ul>
+
+    <div class="close-note">
+      <p>If what is described in these pages names something real in your organisation, write to the address below.</p>
+      <p>The response will be an invitation to walk.</p>
+      <div class="address">
+        Leo Cunningham<br>
+        Suite 267<br>
+        23 King Street<br>
+        Cambridge<br>
+        CB1 1AH
+      </div>
+    </div>
+
+    <p class="copyright">© Leo Cunningham 2026. All rights reserved. Written beyond the air-gap.</p>
+
+  </div>
+
+</body>
+</html>
