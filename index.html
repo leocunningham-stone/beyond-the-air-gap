@@ -28,7 +28,68 @@
       <a href="selected-works.html">Selected Works</a>
       <a href="bridge.html">Enter</a>
     </div>
+
+    <div class="index-code">
+      <input
+        type="text"
+        id="codeInput"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+        placeholder="·"
+      >
+    </div>
   </div>
+
+  <style>
+    .index-code {
+      margin-top: 3rem;
+      opacity: 0;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 5.4s;
+    }
+
+    .index-code input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--text-dimmer);
+      padding: 0.4rem 0;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      color: var(--text-dimmer);
+      outline: none;
+      width: 80px;
+      text-transform: uppercase;
+      transition: border-color 0.3s ease, color 0.3s ease;
+      caret-color: var(--text-dim);
+    }
+
+    .index-code input::placeholder {
+      color: var(--text-dimmer);
+      opacity: 0.4;
+    }
+
+    .index-code input:focus {
+      border-bottom-color: var(--text-dim);
+      color: var(--text-dim);
+    }
+  </style>
+
+  <script>
+    document.getElementById('codeInput').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        var val = this.value.trim().toUpperCase();
+        if (val === 'SIGNAL') {
+          window.location.href = 'cell.html';
+        } else {
+          this.value = '';
+          this.style.borderBottomColor = 'var(--text-dimmer)';
+        }
+      }
+    });
+  </script>
 
 </body>
 </html>
