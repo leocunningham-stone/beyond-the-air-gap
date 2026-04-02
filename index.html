@@ -30,6 +30,7 @@
     </div>
 
     <div class="index-code">
+      <label for="codeInput" class="code-label">Access Code</label>
       <input
         type="text"
         id="codeInput"
@@ -48,6 +49,16 @@
       opacity: 0;
       animation: fadeUp 1s ease forwards;
       animation-delay: 5.4s;
+    }
+
+    .code-label {
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dimmer);
+      margin-bottom: 0.5rem;
     }
 
     .index-code input {
