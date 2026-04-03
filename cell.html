@@ -16,11 +16,7 @@
       --crack: #c8d4d2;
     }
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html, body {
       background-color: var(--bg);
@@ -47,9 +43,7 @@
       transition: color 0.2s ease;
     }
 
-    nav a:hover {
-      color: var(--text-dim);
-    }
+    nav a:hover { color: var(--text-dim); }
 
     .container {
       max-width: 640px;
@@ -57,20 +51,81 @@
       padding: 3rem 2.5rem 6rem;
     }
 
-    .opening {
-      margin-bottom: 3.5rem;
-    }
-
-    .opening p {
+    .answer p {
       font-size: 1.05rem;
-      line-height: 1.8;
+      line-height: 1.85;
       color: var(--text);
       margin-bottom: 1.4rem;
     }
 
-    .opening p.dim {
-      color: var(--text-dim);
+    .answer p.lead {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+
+    .answer h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dimmer);
+      margin-top: 2.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .answer .walk-note {
       font-style: italic;
+      color: var(--text-dim);
+      font-size: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .answer .solvitur {
+      font-style: italic;
+      color: var(--text-dimmer);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact-block {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--text-dimmer);
+      width: 40%;
+    }
+
+    .contact-block p {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      color: var(--text-dimmer);
+      line-height: 2;
+    }
+
+    .contact-block .copyright {
+      font-style: italic;
+      font-size: 0.65rem;
+      margin-top: 1.2rem;
+      color: var(--text-dimmer);
+    }
+
+    .depth-separator {
+      border: none;
+      border-top: 1px solid #141414;
+      margin: 5rem 0 3rem;
+    }
+
+    .depth-label {
+      font-family: 'Courier Prime', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dimmer);
+      margin-bottom: 2rem;
+      opacity: 0.6;
     }
 
     .section-label {
@@ -80,31 +135,18 @@
       text-transform: uppercase;
       color: var(--text-dimmer);
       margin-bottom: 1.4rem;
-      margin-top: 3rem;
+      margin-top: 2.5rem;
     }
 
-    .divider {
-      width: 40%;
-      height: 1px;
-      background: var(--text-dimmer);
-      margin: 3rem 0 2.5rem;
-      opacity: 0.4;
-    }
-
-    .essay-list {
-      list-style: none;
-      margin-bottom: 0;
-    }
+    .essay-list { list-style: none; margin-bottom: 1rem; }
 
     .essay-list li {
-      margin-bottom: 1.8rem;
-      padding-bottom: 1.8rem;
+      margin-bottom: 1.6rem;
+      padding-bottom: 1.6rem;
       border-bottom: 1px solid #141414;
     }
 
-    .essay-list li:last-child {
-      border-bottom: none;
-    }
+    .essay-list li:last-child { border-bottom: none; }
 
     .essay-number {
       font-family: 'Courier Prime', monospace;
@@ -118,16 +160,13 @@
     .essay-list a {
       color: var(--text);
       text-decoration: none;
-      font-size: 1.15rem;
-      font-weight: 400;
+      font-size: 1.1rem;
       display: block;
       margin-bottom: 0.3rem;
       transition: color 0.2s ease;
     }
 
-    .essay-list a:hover {
-      color: var(--crack);
-    }
+    .essay-list a:hover { color: var(--crack); }
 
     .essay-desc {
       font-size: 0.85rem;
@@ -136,20 +175,15 @@
       line-height: 1.5;
     }
 
-    .doc-list {
-      list-style: none;
-      margin-bottom: 0;
-    }
+    .doc-list { list-style: none; }
 
     .doc-list li {
-      margin-bottom: 1.4rem;
-      padding-bottom: 1.4rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 1.2rem;
       border-bottom: 1px solid #141414;
     }
 
-    .doc-list li:last-child {
-      border-bottom: none;
-    }
+    .doc-list li:last-child { border-bottom: none; }
 
     .doc-list a {
       color: var(--text-dim);
@@ -158,14 +192,12 @@
       font-size: 0.7rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      transition: color 0.2s ease;
       display: block;
       margin-bottom: 0.3rem;
+      transition: color 0.2s ease;
     }
 
-    .doc-list a:hover {
-      color: var(--text);
-    }
+    .doc-list a:hover { color: var(--text); }
 
     .doc-desc {
       font-size: 0.85rem;
@@ -174,116 +206,110 @@
       line-height: 1.5;
     }
 
-    .close-note {
-      margin-top: 3.5rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid #141414;
-    }
-
-    .close-note p {
-      font-size: 1rem;
-      line-height: 1.8;
-      color: var(--text-dim);
-      margin-bottom: 1.2rem;
-    }
-
-    .close-note .address {
-      font-family: 'Courier Prime', monospace;
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      color: var(--text-dimmer);
-      line-height: 1.9;
-      margin-top: 1.5rem;
-    }
-
-    .copyright {
-      margin-top: 3rem;
-      font-size: 0.75rem;
-      color: var(--text-dimmer);
-      font-style: italic;
-    }
-
     @media (max-width: 600px) {
-      .container {
-        padding: 2rem 1.5rem 4rem;
-      }
-
-      nav {
-        padding: 1.5rem 1.5rem 0.5rem;
-      }
-
-      .divider {
-        width: 60%;
-      }
+      .container { padding: 2rem 1.5rem 4rem; }
+      nav { padding: 1.5rem 1.5rem 0.5rem; }
+      .contact-block { width: 100%; }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="https://leocunningham.com/index.html">Home</a>
+    <a href="index.html">Home</a>
   </nav>
 
   <div class="container">
 
-    <div class="opening">
-      <p>You have read the doctrine. You are in the right place.</p>
-      <p>What follows is the field work that preceded it. Three essays, in the order they should be read. Then the documents.</p>
-      <p class="dim">If something described in the booklet is real in your organisation, the instruction at the foot of this page is the next move.</p>
+    <div class="answer">
+
+      <p class="lead">You are in an exposed position.</p>
+
+      <p>Not visibly. Not yet. The metrics look right. The board is satisfied. The AI adoption story is holding. But beneath the performance, the judgment layer is thinning — and the system you are using to monitor it is the same system producing the problem.</p>
+
+      <h2>The Confirmation</h2>
+
+      <p>In March 2026 Deutsche Bank asked three AI tools whether AI would solve the economy's inflation problem. The machines disagreed with the consensus. More precisely — they hedged. Flat probabilities. Cautious qualifications. The most statistically acceptable answer available. Deutsche Bank's own economists identified the mechanism: the AI, having been trained on a corpus of economists, was simply behaving like one. Two-handed. Non-committal. Safe.</p>
+
+      <p>A system asked a direct question about its own economic legacy could not answer it. The architecture does not permit it.</p>
+
+      <p>The same week, an Anthropic study confirmed that AI tools are theoretically capable of automating 94% of computer and mathematics work and 90% of office and administrative roles. The adoption gap between current deployment and that theoretical ceiling is not a comfort. It is a timer.</p>
+
+      <h2>The Parallel</h2>
+
+      <p>A select few identified the sub-prime exposure before the system confirmed it. The signal was present. The internal verification architecture routed it through the same lawyers, the same auditors, the same management consensus — and returned the answer it was built to return. The consequences arrived anyway.</p>
+
+      <p>The AI adoption cycle is not the sub-prime crisis. The mechanism is identical.</p>
+
+      <h2>The Pattern</h2>
+
+      <p>The organisations that will contract over the next decade are not the ones that ignored AI. They are the ones that deployed it without maintaining the one function it cannot perform — the sovereign human judgment that sees clearly before the data confirms it, holds the signal when the room overrides it, and finds the move that does not exist in any training data because it has not happened yet.</p>
+
+      <p>That function is thinning in direct proportion to AI adoption. The talent that carries it is leaving. The muscle that produces it is atrophying through disuse. The board is approving the next phase of investment in the system that is accelerating the loss.</p>
+
+      <h2>The Mitigation</h2>
+
+      <p>The Fidelity Cell is the correction.</p>
+
+      <p>Not a programme. Not a consultancy engagement. A protected function — outside the consensus architecture, proportionate in cost, asymmetric in return. The clean room for judgment that the semiconductor industry understood decades ago and that no organisation has yet applied to the human signal its AI depends on.</p>
+
+      <p>The window is not indefinite. The moment to act is before the contraction is visible, not after it is certain.</p>
+
+      <p class="walk-note">A Saturday or Sunday morning. Open ground. A conversation the environment conducts rather than a script either of us follows.</p>
+
+      <p class="solvitur">Solvitur ambulando.</p>
+
+      <p>If this lands, write to the address below. The response will be an invitation to walk.</p>
+
+      <div class="contact-block">
+        <p>Leo Cunningham<br>
+        Suite 267<br>
+        23 King Street<br>
+        Cambridge<br>
+        CB1 1AH</p>
+        <p class="copyright">© Leo Cunningham 2026. All rights reserved.<br>Written beyond the air-gap.</p>
+      </div>
+
     </div>
 
-    <div class="section-label">The Field Reports — Read in this order</div>
+    <hr class="depth-separator">
+
+    <p class="depth-label">For those who want to go further</p>
 
     <ul class="essay-list">
       <li>
         <span class="essay-number">I</span>
-        <a href="https://leocunningham.com/essays/something-is-wrong-in-this-room.html">Something Is Wrong In This Room</a>
+        <a href="essays/something-is-wrong-in-this-room.html">Something Is Wrong In This Room</a>
         <span class="essay-desc">The pre-cognitive signal. What the body reads before the mind has language for it. And what it costs when the room overrides it.</span>
       </li>
       <li>
         <span class="essay-number">II</span>
-        <a href="https://leocunningham.com/essays/the-white-hat.html">The White Hat</a>
+        <a href="essays/the-white-hat.html">The White Hat</a>
         <span class="essay-desc">You already pay people to break your systems. The same logic applies to your judgment. The Fidelity Cell is that function.</span>
       </li>
       <li>
         <span class="essay-number">III</span>
-        <a href="https://leocunningham.com/essays/the-fatality-of-fluency.html">The Fatality of Fluency</a>
+        <a href="essays/the-fatality-of-fluency.html">The Fatality of Fluency</a>
         <span class="essay-desc">Three rooms. Three outliers. Three correct signals. Three systems that functioned exactly as designed. The consequences arrived anyway.</span>
       </li>
     </ul>
 
-    <div class="divider"></div>
-
-    <div class="section-label">The Documents</div>
+    <p class="section-label">The Documents</p>
 
     <ul class="doc-list">
       <li>
-        <a href="https://leocunningham.com/the-advisor.html">The Advisor ↗</a>
+        <a href="the-advisor.html">The Advisor ↗</a>
         <span class="doc-desc">A specification, not a biography. Who does this work and why that description is not hypothetical.</span>
       </li>
       <li>
-        <a href="https://leocunningham.com/assets/docs/the-fidelity-cell.pdf">The Fidelity Cell ↓</a>
+        <a href="assets/docs/the-fidelity-cell.pdf">The Fidelity Cell ↓</a>
         <span class="doc-desc">The doctrine. The complete argument from problem to intervention.</span>
       </li>
       <li>
-        <a href="https://leocunningham.com/assets/docs/fidelity-cell-discovery.pdf">Discovery ↓</a>
+        <a href="assets/docs/fidelity-cell-discovery.pdf">Discovery ↓</a>
         <span class="doc-desc">The first formal engagement. What it is, how it works, what it produces.</span>
       </li>
     </ul>
-
-    <div class="close-note">
-      <p>If what is described in these pages names something real in your organisation, write to the address below.</p>
-      <p>The response will be an invitation to walk.</p>
-      <div class="address">
-        Leo Cunningham<br>
-        Suite 267<br>
-        23 King Street<br>
-        Cambridge<br>
-        CB1 1AH
-      </div>
-    </div>
-
-    <p class="copyright">© Leo Cunningham 2026. All rights reserved. Written beyond the air-gap.</p>
 
   </div>
 
