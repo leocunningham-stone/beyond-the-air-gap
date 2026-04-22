@@ -112,6 +112,33 @@
       color: var(--text-dimmer);
     }
 
+    .bearing-line {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #1a1a1a;
+    }
+
+    .bearing-line p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .bearing-line a {
+      color: var(--text-dim);
+      text-decoration: none;
+      border-bottom: 1px solid var(--text-dimmer);
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .bearing-line a:hover {
+      color: var(--text);
+      border-bottom-color: var(--text);
+    }
+
     .depth-separator {
       border: none;
       border-top: 1px solid #141414;
@@ -267,6 +294,10 @@
         Cambridge<br>
         CB1 1AH</p>
         <p class="copyright">© Leo Cunningham 2026. All rights reserved.<br>Written beyond the air-gap.</p>
+      </div>
+
+      <div class="bearing-line">
+        <p>You are not the only one who has seen this coming. <a href="essays/two-bearings-one-fix.html">Two Bearings, One Fix →</a></p>
       </div>
 
     </div>
